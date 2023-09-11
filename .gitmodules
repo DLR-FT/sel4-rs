@@ -1,0 +1,18 @@
+[submodule "sel4-sys/sel4/kernel"]
+	path = sel4-sys/sel4/kernel
+	url = https://github.com/moritz-meier/seL4.git
+[submodule "sel4-sys/sel4/tools"]
+	path = sel4-sys/sel4/tools
+	url = https://github.com/moritz-meier/seL4_tools.git
+[submodule "sel4-sys/sel4/projects/musllibc"]
+	path = sel4-sys/sel4/projects/musllibc
+	url = https://github.com/seL4/musllibc.git
+[submodule "sel4-sys/sel4/projects/seL4_libs"]
+	path = sel4-sys/sel4/projects/seL4_libs
+	url = https://github.com/seL4/seL4_libs.git
+[submodule "sel4-sys/sel4/projects/sel4runtime"]
+	path = sel4-sys/sel4/projects/sel4runtime
+	url = https://github.com/seL4/sel4runtime.git
+[submodule "sel4-sys/sel4/projects/util_libs"]
+	path = sel4-sys/sel4/projects/util_libs
+	url = https://github.com/moritz-meier/util_libs.git

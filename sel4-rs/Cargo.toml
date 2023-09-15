@@ -19,3 +19,10 @@ dangerous-code-injection = ["sel4-sys/dangerous-code-injection"]
 [dependencies]
 sel4-sys = { path = "../sel4-sys", default-features = false }
 zynq7000 = { path = "../platforms/zynq7000", optional = true }
+
+[build-dependencies]
+anyhow = "1.0.75"
+indoc = "2.0.3"
+quote = "1.0.32"
+elf = "0.7.2"
+fdt = { git = "https://github.com/moritz-meier/fdt.git", branch = "feature/stdinout-path-split-params" }

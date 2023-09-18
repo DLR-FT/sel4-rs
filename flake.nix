@@ -69,6 +69,9 @@
             cargo = rust-toolchains.stable;
             rustc = rust-toolchains.stable;
           });
+
+          SEL4_ADDITIONAL_CMAKE_FLAGS = "-DCROSS_COMPILER_PREFIX=arm-none-eabihf-";
+
         in
         rec {
 
@@ -186,6 +189,8 @@
                   pkgs.nixpkgs-fmt # formatting nix files
                   pkgs.nodePackages.prettier # prettifier for MarkDown and YAML
                 ];
+
+              inherit SEL4_ADDITIONAL_CMAKE_FLAGS;
             };
           };
 

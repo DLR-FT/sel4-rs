@@ -147,6 +147,11 @@ fn cmake_config(config: SeL4Config, build_dir: impl AsRef<Path>) -> Result<()> {
 
     args.append(&mut config.get_cmake_args());
 
+    // allows user overrides to the build script
+    if let Ok(flags) = std::env::var("SEL4_ADDITIONAL_CMAKE_FLAGS") {
+        args.push(flags);
+    }
+
     let output = cmd("cmake", args).read()?;
 
     for line in output.lines() {

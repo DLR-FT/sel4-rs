@@ -212,7 +212,7 @@ fn generate_sel4_linker_overlay(
 
     let kernel_ld = formatdoc!(
         r#"SECTIONS {{
-            .kernel : {{
+            .kernel (NOLOAD) : {{
                 __kernel_start = {:#X};
                 . = __kernel_start;
                 FILL(0);
@@ -220,7 +220,7 @@ fn generate_sel4_linker_overlay(
                 . = __kernel_end;
             }} > RAM
 
-            .devicetree : {{
+            .devicetree (NOLOAD) : {{
                 __devicetree_start = {:#X};
                 . = __devicetree_start;
                 FILL(0);
